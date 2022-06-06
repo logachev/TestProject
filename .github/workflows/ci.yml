@@ -14,8 +14,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - run: |
-        echo "test"
+      - name: test
+        run: echo "test"
 
       - name: Exit if not on main branch
         if: endsWith(github.ref, 'master') == false
